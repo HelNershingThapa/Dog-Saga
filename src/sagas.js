@@ -15,7 +15,7 @@ function* workerSaga() {
 	}
 }
 
-function fetchDog() {
+function fetchDog()as {
 	return axios({ 
 		method: "GET",
 		url: "https://dog.ceo/api/breeds/image/random"
