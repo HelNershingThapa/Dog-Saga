@@ -6,7 +6,7 @@ export function* watcherSaga() {
 }
 
 function* workerSaga() {
-	try {
+	try 
 		const response = yield call(fetchDog);
 		const dog = response.data.message
 		yield put ({ type: 'API_CALL_SUCCESS', dog })
