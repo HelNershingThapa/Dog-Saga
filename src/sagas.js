@@ -8,14 +8,14 @@ export function* watcherSaga() {
 function* workerSaga() {
 	try {
 		const response = yield call(fetchDog);
-		const dog = response.data.message 
-		yield put ({ type: 'API_CALL_SUCCESS', dog })
+		const tiger = response.data.message 
+		yield put ({ type: 'API_CALL_SUCCESS', tiger })
 	} catch(error) {
 		yield put ({ type: 'API_CALL_FAILURE', error})
 	}
 }
 
-function fetchDog() {
+function fetchsDog() {
 	return axios({ 
 		method: "GET",
 		url: "https://dog.ceo/api/breeds/image/random"
