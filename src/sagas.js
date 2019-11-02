@@ -7,16 +7,16 @@ export function* watcherSaga() {
 
 function* workerSaga() {
 	try {
-		const response = yield call(fetchDog);
-		const dog = response.data.message 
-		yield put ({ type: 'API_CALL_SUCCESS', dog })
+		const response = yield call(fetchCat);
+		const cat = response.data.message
+		yield put ({ type: 'API_CALL_SUCCESS', cat })
 	} catch(error) {
 		yield put ({ type: 'API_CALL_FAILURE', error})
 	}
 }
 
-function fetchDog() {
-	return axios({ 
+function fetchCat() {
+	return axios({
 		method: "GET",
 		url: "https://dog.ceo/api/breeds/image/random"
 	})
