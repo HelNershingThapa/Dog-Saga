@@ -10,7 +10,7 @@ function* workerSaga() {
 		const response = yield call(fetchDog);
 		const dog = response.data.message
 		yield put ({ type: 'API_CALL_SUCCESS', dog })
-	} catch(error) {
+	} catch(rror) {
 		yield put ({ type: 'API_CALL_FAILURE', error})
 	}
 }
